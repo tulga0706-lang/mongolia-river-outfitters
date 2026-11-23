@@ -42,7 +42,7 @@
 
   /* testimonials pager (3 at a time) */
   var qs = $$('.quotes .q');
-  if (qs.length) {
+  if (qs.length && $('#q-prev')) {
     var per = 3, page = 0, cnt = $('#q-count'), prev = $('#q-prev'), next = $('#q-next');
     var draw = function () {
       var w = window.innerWidth < 860 ? 1 : per;
