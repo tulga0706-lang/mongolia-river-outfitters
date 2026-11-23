@@ -1,10 +1,10 @@
 /* Mongolia River Outfitters — plain CSS */
 :root{
-  --ink:#1b1b1b; --muted:#6b665c; --soft:#8a8478;
-  --red:#c43d2f; --red-d:#a93126;
-  --cream:#f1ede3; --sand:#e5ddd0; --line:#e3dccb; --white:#fff;
-  --g-bg:#ebeee8; --g:#2f5a45;
-  --w-bg:#f6ecdc; --w:#7a4b1f;
+  --ink:#1a1a1a; --muted:#6e675d; --soft:#8a8378;
+  --red:#c23d2f; --red-d:#a13226;
+  --cream:#f3eee4; --sand:#e4ddd0; --line:#e4ddd0; --white:#fff;
+  --g-bg:#ebf1ea; --g:#2f5a45;
+  --w-bg:#f6eddd; --w:#7a4b1f;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Work Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
   --pad:max(24px,calc((100vw - 1312px)/2));
@@ -463,8 +463,8 @@ dialog.modal::backdrop{background:rgba(20,16,10,.62)}
 .masonry img{width:100%;height:auto;transition:transform .5s}
 .masonry button:hover img{transform:scale(1.03)}
 .masonry button[hidden]{display:none}
-dialog.lb{border:0;padding:0;background:#1b1b1b;color:#eee;width:100vw;height:100vh;max-width:none;max-height:none}
-dialog.lb::backdrop{background:#1b1b1b}
+dialog.lb{border:0;padding:0;background:#1a1a1a;color:#eee;width:100vw;height:100vh;max-width:none;max-height:none}
+dialog.lb::backdrop{background:#1a1a1a}
 .lb-in{height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:20px clamp(16px,4vw,56px) 28px}
 .lb-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.14em;color:#aaa}
 .lb-stage{display:flex;align-items:center;justify-content:center;gap:clamp(8px,3vw,40px);min-height:0}
