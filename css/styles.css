@@ -458,9 +458,9 @@ dialog.modal::backdrop{background:rgba(20,16,10,.62)}
 @media (max-width:620px){.modal-in{grid-template-columns:1fr}.modal-in .ph{aspect-ratio:2/1}}
 
 /* gallery */
-.masonry{columns:3 320px;column-gap:14px;padding-block:28px 64px}
-.masonry button{display:block;width:100%;border:0;padding:0;margin:0 0 14px;background:var(--cream);break-inside:avoid;overflow:hidden}
-.masonry img{width:100%;height:auto;transition:transform .5s}
+.masonry{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;padding-block:28px 64px}
+.masonry button{display:block;width:100%;border:0;padding:0;margin:0;background:var(--cream);aspect-ratio:3/2;overflow:hidden;cursor:zoom-in}
+.masonry img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .masonry button:hover img{transform:scale(1.03)}
 .masonry button[hidden]{display:none}
 dialog.lb{border:0;padding:0;background:#1a1a1a;color:#eee;width:100vw;height:100vh;max-width:none;max-height:none}
