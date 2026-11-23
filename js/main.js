@@ -153,8 +153,9 @@
     '<p class="eyebrow">Enquire</p><h3 class="h3">How would you like to reach us?</h3>' +
     '<p class="small enq-sub">We reply within 48 hours with availability and pricing.</p>' +
     '<div class="enq-btns"><a class="btn btn-red" data-g target="_blank" rel="noopener">Write in Gmail</a>' +
+    '<a class="btn btn-line" data-m>Open your mail app</a>' +
     '<a class="btn btn-line" href="https://wa.me/97699069762" target="_blank" rel="noopener">WhatsApp</a></div>' +
-    '<p class="enq-copy">Or email <b>' + MAIL + '</b> <button type="button" class="lnk" data-c>Copy</button> · <a class="lnk" data-m>Use my mail app</a></p></div>';
+    '<p class="enq-copy">Or email <b>' + MAIL + '</b> <button type="button" class="lnk" data-c>Copy</button></p></div>';
   document.body.appendChild(d);
   d.querySelector('.x').onclick = function () { d.close(); };
   d.addEventListener('click', function (e) { if (e.target === d) d.close(); });

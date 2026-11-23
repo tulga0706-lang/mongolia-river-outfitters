@@ -530,4 +530,3 @@ dialog.enq{max-width:460px}
 #trip-filter .chips{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:center}
 .chip-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .chip-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:6px}
-.enq-copy a.lnk{color:var(--red);font-weight:600;cursor:pointer}
