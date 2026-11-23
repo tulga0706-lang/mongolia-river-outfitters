@@ -143,3 +143,33 @@
     });
   });
 })();
+
+/* Enquire dialog: mailto alone fails when no mail app is set up, so offer Gmail, mail app, WhatsApp and copy */
+(function () {
+  var MAIL = 'info@mongoliarivers.com';
+  var d = document.createElement('dialog');
+  d.className = 'modal enq';
+  d.innerHTML = '<div class="enq-in"><button class="x" type="button" aria-label="Close">×</button>' +
+    '<p class="eyebrow">Enquire</p><h3 class="h3">How would you like to reach us?</h3>' +
+    '<p class="small enq-sub">We reply within 48 hours with availability and pricing.</p>' +
+    '<div class="enq-btns"><a class="btn btn-red" data-g target="_blank" rel="noopener">Write in Gmail</a>' +
+    '<a class="btn btn-line" data-m>Open your mail app</a>' +
+    '<a class="btn btn-line" href="https://wa.me/97699069762" target="_blank" rel="noopener">WhatsApp</a></div>' +
+    '<p class="enq-copy">Or email <b>' + MAIL + '</b> <button type="button" class="lnk" data-c>Copy</button></p></div>';
+  document.body.appendChild(d);
+  d.querySelector('.x').onclick = function () { d.close(); };
+  d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:' + MAIL + '"]');
+    if (!a || a.closest('dialog.enq')) return;
+    e.preventDefault();
+    var q = (a.getAttribute('href').split('subject=')[1] || 'Trip%20enquiry');
+    d.querySelector('[data-g]').href = 'https://mail.google.com/mail/?view=cm&to=' + MAIL + '&su=' + q;
+    d.querySelector('[data-m]').href = 'mailto:' + MAIL + '?subject=' + q;
+    d.showModal();
+  });
+  d.querySelector('[data-c]').onclick = function () {
+    var b = this;
+    (navigator.clipboard ? navigator.clipboard.writeText(MAIL) : Promise.reject()).then(function () { b.textContent = 'Copied'; }, function () { b.textContent = MAIL; });
+  };
+})();

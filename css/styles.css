@@ -518,3 +518,12 @@ dialog.lb::backdrop{background:#1a1a1a}
 
 @media print{.nav,.tabs,.foot,.cta{display:none}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+dialog.enq{max-width:460px}
+.enq-in{padding:36px;position:relative}
+.enq-in .x{position:absolute;right:12px;top:12px;width:34px;height:34px;border:1px solid var(--line);background:#fff;font-size:18px;line-height:1;cursor:pointer}
+.enq-in .eyebrow{margin-bottom:10px}
+.enq-sub{margin:8px 0 22px}
+.enq-btns{display:grid;gap:10px}
+.enq-copy{margin-top:20px;font-size:14px;color:var(--muted)}
+.enq-copy b{color:var(--ink);font-weight:600}
+.enq-copy .lnk{background:none;border:0;padding:0;margin-left:6px;cursor:pointer;font:inherit;color:var(--red);font-weight:600}
