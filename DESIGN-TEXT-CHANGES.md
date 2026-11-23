@@ -50,3 +50,20 @@ Camp descriptions (the "Where you stay" paragraph) and the first FAQ answer ("Ho
 ## Not yet checked against the design
 - "Target fish" short descriptions on the five trip pages (e.g. Lenok, Asp) use the generic text, which may differ slightly from the design.
 - Itinerary day descriptions, "Why anglers choose it", overview paragraphs, news excerpts and shop text were written from what could be read; not all re-verified word for word.
+
+---
+
+# Second round: more text set to match the design (2026-11-24)
+
+Previous wording is in commit `1633563` (everything before this round).
+
+| Where | Previous wording | Now (matches design) |
+|---|---|---|
+| Trip cards (home, trips, river pages) — link under each card | "Combine with Headwaters Expedition" (Classic), "Combine with Classic Canyons" (Headwaters), "Combine with Lower River" (Upper), "Combine with Buryat + Upper River" (Lower), "Combine with Upper + Lower River" (Buryat) | Classic: "Combine with Headwaters Expedition"; Headwaters: "Combine with Classic Canyons Adventure"; Upper: "Continue on the Lower River Adventure"; Lower: "Chain with Buryat + Upper River for 20+ days"; Buryat: "Chain with Upper + Lower River for 20+ days" |
+| Buryat card label | ONON RIVER · AUGUST–OCTOBER | ONON RIVER, UPSTREAM · AUG–OCTOBER |
+| Lower River card details | 11 days · 4 anglers · Tent-tipi, then ger camps · Drift boat + wade day | 11 days · 4 anglers · Tent-tipi + ger camps · Drift boat |
+| Delgermurun river page, 2nd paragraph | We float it the same way on every trip: new water each day, with the camp team moving ahead of you. | We float it the way we float every river: no shuttles. Each day you fish new water from a drift boat while the crew moves camp ahead, so the tents are up and dinner is on when you arrive. Summer light lasts late, so the evening rise is yours. |
+| Onon trip pages (Upper, Lower, Buryat) "Target fish" | 4 cards: Taimen, Lenok, Amur pike, Asp; Lenok "…a regular, hard-fighting catch between taimen." | 3 cards: Taimen, Lenok, Amur pike; Lenok "Often called Mongolian trout — hard-fighting and widespread." |
+| Headwaters trip page guest labels | "Montana, USA · Headwaters Expedition 2025" (and the other two) | "… · Headwaters 2025" |
+
+Not checked word for word: very large headings and small grey text (the text-reading tool skipped them).
