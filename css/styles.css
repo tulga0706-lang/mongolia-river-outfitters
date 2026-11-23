@@ -527,3 +527,6 @@ dialog.enq{max-width:460px}
 .enq-copy{margin-top:20px;font-size:14px;color:var(--muted)}
 .enq-copy b{color:var(--ink);font-weight:600}
 .enq-copy .lnk{background:none;border:0;padding:0;margin-left:6px;cursor:pointer;font:inherit;color:var(--red);font-weight:600}
+#trip-filter .chips{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:center}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:6px}

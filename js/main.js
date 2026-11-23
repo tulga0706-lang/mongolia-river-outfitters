@@ -173,3 +173,33 @@
     (navigator.clipboard ? navigator.clipboard.writeText(MAIL) : Promise.reject()).then(function () { b.textContent = 'Copied'; }, function () { b.textContent = MAIL; });
   };
 })();
+
+/* Trips page: River + Effort filters combine (both must match) */
+(function () {
+  var bar = document.getElementById('trip-filter'); if (!bar) return;
+  var st = { river: 'all', effort: 'any' };
+  var none = document.getElementById('trip-none');
+  function run() {
+    var shown = 0;
+    [].forEach.call(document.querySelectorAll('#trip-list [data-river]'), function (grp) {
+      var n = 0;
+      [].forEach.call(grp.querySelectorAll('[data-cat]'), function (it) {
+        var c = it.getAttribute('data-cat').split(' ');
+        var okR = st.river === 'all' || c.indexOf(st.river) > -1;
+        var okE = st.effort === 'any' || c.indexOf(st.effort) > -1 || (st.effort === 'expedition' && c.indexOf('demanding') > -1);
+        it.hidden = !(okR && okE); if (!it.hidden) n++;
+      });
+      grp.hidden = n === 0; shown += n;
+    });
+    if (none) none.hidden = shown > 0;
+  }
+  [].forEach.call(bar.querySelectorAll('.chip-row'), function (row) {
+    var key = row.getAttribute('data-group');
+    [].forEach.call(row.querySelectorAll('.chip'), function (c) {
+      c.addEventListener('click', function () {
+        [].forEach.call(row.querySelectorAll('.chip'), function (x) { x.setAttribute('aria-pressed', 'false'); });
+        c.setAttribute('aria-pressed', 'true'); st[key] = c.getAttribute('data-f'); run();
+      });
+    });
+  });
+})();
