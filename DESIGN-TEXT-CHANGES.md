@@ -70,3 +70,7 @@ Not checked word for word: very large headings and small grey text (the text-rea
 
 ## Contact page restored
 The Contact page was removed per the Figma owner note, then restored at the user's request. To remove it again, delete contact.html and point the Enquire links to the email/WhatsApp (see commit 67a9ac2).
+
+## Mobile layout pass (390px boards)
+CSS-only mobile changes (appended to the end of css/styles.css, "Mobile match" block) plus markup: partner logo slices (img/p01-p12.png), menu-foot in the nav, fx-facts/fx-cta wrappers on trip pages, and link labels (Read more, Read bio, Reserve, About taimen). To undo, remove the "Mobile match" block and revert this commit.
+Not done: team groups on About (design repeats the 4 cards per group), About X labels for species without a page.

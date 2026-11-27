@@ -530,3 +530,72 @@ dialog.enq{max-width:460px}
 #trip-filter .chips{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:center}
 .chip-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .chip-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+
+/* ===== Mobile match to the design's 390px boards ===== */
+.more-l{display:block;font-size:12px;font-weight:600;color:var(--red);margin-top:14px;font-style:normal}
+.post a:hover .more-l,.person:hover .more-l,.fishcard a:hover .more-l{text-decoration:underline}
+.prod .pp{display:flex;justify-content:space-between;align-items:baseline}
+.prod .pp b{color:var(--red);font-weight:600}
+.plogos{display:none}
+.menu-foot{display:none}
+.facts-box{display:flex;flex-direction:column;border-top:0;padding-top:0}
+.fx-facts{order:1;border-top:3px solid var(--g);padding-top:14px}
+.t-w .fx-facts{border-top-color:var(--w)}
+.fx-cta{order:2}
+@media (max-width:860px){
+  .fx-cta{order:0}
+  .fx-facts{order:1;margin-top:28px}
+  .two,.iti,.faq-wrap{gap:24px}
+  .river-split>:not(.copy){order:-1}
+}
+@media (max-width:760px){
+  .trip-hero .display{max-width:none;font-size:36px}
+  /* photo on top, card below (design) */
+  .feature{display:block;min-height:0;margin-bottom:0}
+  .feature>img{position:static;height:auto;aspect-ratio:3/2;display:block}
+  .feature>.wrap{padding:0;max-width:none}
+  .feature .card{width:100%;margin:0;padding:28px var(--pad) 32px}
+  .cta{display:block;padding:0}
+  .cta>img.bg{position:static;display:block;height:auto;aspect-ratio:5/3}
+  .cta.dark::before{display:none}
+  .cta-card{width:100%;padding:36px var(--pad) 40px}
+  .pdesk{display:none}
+  .plogos{display:grid;grid-template-columns:1fr 1fr;gap:26px 20px;align-items:center;justify-items:center;margin-top:8px}
+  .plogos img{width:auto;max-width:100%;max-height:60px;mix-blend-mode:multiply}
+  /* fish cards: framed, inset photo */
+  .fishcard{padding:16px}
+  .fishcard .b{padding:16px 0 4px}
+}
+@media (max-width:600px){
+  .nav-cta{display:none}
+  .burger{margin-left:auto}
+  .burger[aria-expanded=true] svg{display:none}
+  .burger[aria-expanded=true]::before{content:"\2715";font-size:18px;line-height:1}
+  /* full-screen menu */
+  .menu.open{position:fixed;left:0;right:0;top:79px;bottom:0;overflow-y:auto;border:0;padding:0 var(--pad) 140px;z-index:60}
+  .menu>a{font-family:var(--serif);font-size:26px;font-weight:600;padding:16px 0}
+  .menu>a::after{content:"";position:static;width:8px;height:8px;margin:0;border:0;border-top:2px solid var(--ink);border-right:2px solid var(--ink);border-radius:0;background:none;transform:rotate(45deg);display:block!important}
+  .menu .on::after{display:block!important;left:auto;bottom:auto;margin:0}
+  .menu .has-more{width:100%}
+  .menu button.more{display:none}
+  .has-more::before{content:"MORE";display:block;font-size:11px;letter-spacing:.16em;font-weight:600;color:var(--muted);padding:22px 0 6px}
+  .drop,.drop.open{display:grid!important;grid-template-columns:1fr 1fr;position:static;border:0;padding:0;min-width:0}
+  .drop a{padding:12px 0;font-size:15px;border:0}
+  .drop a.on{color:var(--ink);font-weight:600}
+  .menu-foot{display:block;position:fixed;left:0;right:0;bottom:0;background:var(--cream);padding:18px var(--pad) 22px;z-index:61}
+  .menu-foot p{font-size:12px;color:var(--muted);margin-top:12px}
+}
+@media (max-width:560px){
+  .iti li{grid-template-columns:1fr;gap:4px}
+  .months{grid-template-columns:repeat(6,1fr);row-gap:16px;max-width:none}
+}
+@media (max-width:600px){.menu-foot .btn{padding:16px;border:0;justify-content:center;width:100%;font-family:var(--sans);font-size:15px;font-weight:600}}
+@media (max-width:600px){.menu-foot .btn{background:var(--red);color:#fff}.menu-foot .btn:hover{background:var(--red-dark);color:#fff}}
+@media (max-width:760px){
+  .feature .card .h2{font-size:32px}
+  .card .acts{flex-direction:column;align-items:stretch;gap:18px}
+  .card .acts .btn{width:100%;justify-content:center}
+  .card .acts .lnk{align-self:flex-start}
+}
+@media (max-width:760px){.collage{height:190px}.mosaic{height:240px}}
+@media (max-width:560px){.foot-grid>:nth-child(2),.foot-grid>:nth-child(5){grid-column:1/-1}}
