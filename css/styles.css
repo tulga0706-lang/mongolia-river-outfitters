@@ -606,3 +606,4 @@ dialog.enq{max-width:460px}
   .card .acts .lnk{align-self:flex-start}
 }
 .two>*,.iti>*,.river-split>*,.faq-wrap>*{min-width:0}
+.cards>*,.trip-mini .b{min-width:0}.trip-mini .acts{flex-wrap:wrap}
