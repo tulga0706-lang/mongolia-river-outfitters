@@ -67,3 +67,6 @@ Previous wording is in commit `1633563` (everything before this round).
 | Headwaters trip page guest labels | "Montana, USA · Headwaters Expedition 2025" (and the other two) | "… · Headwaters 2025" |
 
 Not checked word for word: very large headings and small grey text (the text-reading tool skipped them).
+
+## Contact page restored
+The Contact page was removed per the Figma owner note, then restored at the user's request. To remove it again, delete contact.html and point the Enquire links to the email/WhatsApp (see commit 67a9ac2).
